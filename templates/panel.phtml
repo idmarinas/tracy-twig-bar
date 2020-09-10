@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * Tracy Twig Bar.
+ *
+ * @see      https://github.com/idmarinas/tracy-twig-bar
+ *
+ * @author    IDMarinas
+ * @copyright Copyright (c) 2020 Iván Diaz Marinas, IDMarinas.
+ * @license   See LICENSE.md
+ */
+
+namespace Idmarinas\TracyPanel;
+
+?>
+
+<style>
+    #tracy-debug .idmarinas-tracy-twig-bar tr td,
+    #tracy-debug .idmarinas-tracy-twig-bar tr th
+    {
+        text-align: center;
+    }
+</style>
+
+<h1>Twig Templates</h1>
+<div class="tracy-inner tracy-twig-bar">
+    <h2>Twig Metrics</h2>
+    <table class="idmarinas-tracy-twig-bar">
+        <tr>
+            <td><?= $duration ?></td>
+            <td><?= $memory ?></td>
+            <td><?= $this->templateCount ?></td>
+            <td><?= $this->blockCount ?></td>
+            <td><?= $this->macroCount ?></td>
+        </tr>
+        <tr>
+            <th scope="col">Render time</th>
+            <th scope="col">Memory usage</th>
+            <th scope="col">Template calls</th>
+            <th scope="col">Blocks calls</th>
+            <th scope="col">Macro calls</th>
+        </tr>
+    </table>
+    <h2>Templates rendered</h2>
+    <table>
+        <tr>
+            <th scope="col">Template name</th>
+            <th scope="col">Render time</th>
+            <th scope="col">Memory usage</th>
+        </tr>
+        <?php foreach ($this->templates as $tpl): ?>
+            <tr>
+                <td><?= $tpl['name'] ?></td>
+                <td><?= $tpl['duration'] ?></td>
+                <td><?= $tpl['memory'] ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</div>

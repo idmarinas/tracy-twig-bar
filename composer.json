@@ -1,0 +1,34 @@
+{
+    "name": "idmarinas/tracy-twig-bar",
+	"version" : "0.1.0",
+    "description": "A Tracy panel for Twig templates",
+    "keywords": ["Tracy", "Debugger", "Twig", "Panel", "Bar"],
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "IDMarinas",
+            "email": "35842929+idmarinas@users.noreply.github.com",
+            "homepage": "https://github.com/idmarinas/lotgd-game",
+            "role": "Developer, Maintainer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.2",
+        "tracy/tracy": "^2.7",
+        "twig/twig": "^2.0 || ^3.0"
+    },
+    "require-dev": {
+    },
+    "config": {
+        "process-timeout": 5000,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Idmarinas\\TracyPanel\\": "src/"
+        }
+    }
+}

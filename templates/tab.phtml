@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Tracy Twig Bar.
+ *
+ * @see      https://github.com/idmarinas/tracy-twig-bar
+ *
+ * @author    IDMarinas
+ * @copyright Copyright (c) 2020 Iván Diaz Marinas, IDMarinas.
+ * @license   See LICENSE.md
+ */
+
+namespace Idmarinas\TracyPanel;
+
+if (! $show)
+{
+    return;
+}
+
+?>
+<span title="Twig Engine">
+    <?= $this->icon ?>
+    <span class="tracy-label">Twig (<?= $duration ?>)</span>
+</span>
