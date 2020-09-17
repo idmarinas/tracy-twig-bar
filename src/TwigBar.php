@@ -52,6 +52,8 @@ class TwigBar implements IbarPanel
 
     /**
      * {@inheritdoc}
+     *
+     * @SuppressWarnings(PHPMD.UnusedLocalVariable)
      */
     public function getPanel(): string
     {
@@ -68,6 +70,8 @@ class TwigBar implements IbarPanel
 
     /**
      * {@inheritdoc}
+     *
+     * @SuppressWarnings(PHPMD.UnusedLocalVariable)
      */
     public function getTab(): string
     {
