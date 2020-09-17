@@ -53,6 +53,8 @@ plugins:
         enabled: true
         exclude_patterns:
             - "vendor/"
+            - "**/*.ico"
+            - "**/*.png"
         config:
             file_extensions: "php"
         checks:
