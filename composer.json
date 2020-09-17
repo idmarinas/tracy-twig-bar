@@ -1,7 +1,7 @@
 {
     "name": "idmarinas/tracy-twig-bar",
-	"version" : "0.1.0",
-    "description": "A Tracy panel for Twig templates",
+    "version" : "0.1.0",
+    "description": "A Tracy panel for Twig Template Engine",
     "keywords": ["Tracy", "Debugger", "Twig", "Panel", "Bar"],
     "type": "library",
     "license": "BSD-3-Clause",
@@ -16,11 +16,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.2",
+        "php": "^7.2",
         "tracy/tracy": "^2.7",
         "twig/twig": "^2.0 || ^3.0"
-    },
-    "require-dev": {
     },
     "config": {
         "process-timeout": 5000,
