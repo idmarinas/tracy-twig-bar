@@ -41,6 +41,7 @@ Somewhere, when your application start and you initialize Twig engine
 
 ```php
 use Idmarinas\TracyPanel\TwigBar;
+use Idmarinas\TracyPanel\Twig\TracyExtension;
 use Twig\Environment;
 use Twig\Extension\ProfilerExtension;
 use Twig\Profiler\Profile;
@@ -49,6 +50,13 @@ use Twig\Profiler\Profile;
 $profile = new Profile();
 $env = new Environment($loader, $options);
 $env->addExtension(new ProfilerExtension($profile));
+
+/**
+ * Optional Twig Extension.
+ *
+ * Can use `dump`, `dumpe` and `bdump` functions of Tracy
+ */
+$env->addExtension(new TracyExtension()); //-- Optional
 
 TwigBar::init($profile);
 ```
