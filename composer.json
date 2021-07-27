@@ -1,6 +1,6 @@
 {
     "name": "idmarinas/tracy-twig-bar",
-    "version" : "0.1.2",
+    "version" : "0.2.0",
     "description": "A Tracy panel for Twig Template Engine",
     "keywords": ["Tracy", "Debugger", "Twig", "Panel", "Bar"],
     "type": "library",
