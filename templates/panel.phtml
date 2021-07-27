@@ -6,7 +6,7 @@
  * @see      https://github.com/idmarinas/tracy-twig-bar
  *
  * @author    IDMarinas
- * @copyright Copyright (c) 2020 Iván Diaz Marinas, IDMarinas.
+ * @copyright Copyright (c) 2021 Iván Diaz Marinas, IDMarinas.
  * @license   See LICENSE.md
  */
 
