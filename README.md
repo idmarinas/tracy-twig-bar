@@ -15,9 +15,9 @@
 <div align="center">
 
 [![Test Suite](https://img.shields.io/github/actions/workflow/status/idmarinas/tracy-twig-bar/php.yml?branch=master&style=for-the-badge&logo=github&logoColor=white&label=Lotgd%20Test%20Suite)][test-suit]
-[![Quality Gate Status](https://img.shields.io/sonar/quality_gate/SONAR_PROJECT_NAME_CHANGE_ME/master?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)](https://sonarcloud.io/summary/new_code?id=SONAR_PROJECT_NAME_CHANGE_ME)
-[![Coverage](https://img.shields.io/sonar/coverage/SONAR_PROJECT_NAME_CHANGE_ME/master?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
-[![Technical Debt](https://img.shields.io/sonar/tech_debt/SONAR_PROJECT_NAME_CHANGE_ME/master?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
+[![Quality Gate Status](https://img.shields.io/sonar/quality_gate/idmarinas_tracy-twig-bar/master?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)](https://sonarcloud.io/summary/new_code?id=idmarinas_tracy-twig-bar)
+[![Coverage](https://img.shields.io/sonar/coverage/idmarinas_tracy-twig-bar/master?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
+[![Technical Debt](https://img.shields.io/sonar/tech_debt/idmarinas_tracy-twig-bar/master?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
 
 <br />
 
@@ -27,13 +27,13 @@
 
 #### Code analysis
 
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=master&metric=reliability_rating)][sonarcloud]
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=master&metric=bugs)][sonarcloud]
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=master&metric=security_rating)][sonarcloud]
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=master&metric=vulnerabilities)][sonarcloud]
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=master&metric=sqale_rating)][sonarcloud]
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=master&metric=code_smells)][sonarcloud]
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=master&metric=duplicated_lines_density)][sonarcloud]
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_tracy-twig-bar&branch=master&metric=reliability_rating)][sonarcloud]
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_tracy-twig-bar&branch=master&metric=bugs)][sonarcloud]
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_tracy-twig-bar&branch=master&metric=security_rating)][sonarcloud]
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_tracy-twig-bar&branch=master&metric=vulnerabilities)][sonarcloud]
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_tracy-twig-bar&branch=master&metric=sqale_rating)][sonarcloud]
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_tracy-twig-bar&branch=master&metric=code_smells)][sonarcloud]
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_tracy-twig-bar&branch=master&metric=duplicated_lines_density)][sonarcloud]
 
 </div>
 
@@ -64,7 +64,7 @@ composer require --dev idmarinas/tracy-twig-bar
 
 ## Usage ##
 
-Somewhere, when your application start and you initialize Twig engine
+Somewhere, when your application starts and you initialize Twig engine
 
 ```php
 use Idmarinas\TracyPanel\TwigBar;
@@ -108,5 +108,5 @@ TwigBar::init($profile);
 [![Discord](https://img.shields.io/badge/Discord-IDMarinas-blue?logo=discord&style=for-the-badge&logoColor=white)](https://discord.gg/FXEZqpF)
 
 [//]: # (@formatter:off)
-[sonarcloud]: https://sonarcloud.io/dashboard?id=SONAR_PROJECT_NAME_CHANGE_ME
+[sonarcloud]: https://sonarcloud.io/dashboard?id=idmarinas_tracy-twig-bar
 [test-suit]: https://github.com/idmarinas/tracy-twig-bar/actions/workflows/php.yml
