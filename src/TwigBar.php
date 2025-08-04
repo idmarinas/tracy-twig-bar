@@ -23,27 +23,34 @@ use Twig\Profiler\Profile;
 class TwigBar implements IbarPanel
 {
     protected $icon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#4E910C" d="M8.932 22.492c.016-6.448-.971-11.295-5.995-11.619 4.69-.352 7.113 2.633 9.298 6.907C12.205 6.354 9.882 1.553 4.8 1.297c7.433.07 10.028 5.9 11.508 14.293 1.171-2.282 3.56-5.553 5.347-1.361-1.594-2.04-3.607-1.617-3.978 8.262H8.933z"></path></svg>';
+
     protected $profiler;
+
     protected $name = 'main';
+
     protected $twigEngine;
+
     protected $templateCount = 0;
+
     protected $blockCount    = 0;
+
     protected $macroCount    = 0;
+
     protected $templates     = [];
 
     /**
      * Initialize the panel.
      */
-    public function __construct(Profile $profiler)
+    public function __construct(Profile $profile)
     {
-        $this->profiler = $profiler;
+        $this->profiler = $profile;
     }
 
     /**
      * Create and initialize a new TwigBar tab/panel.
      * The panel will be attach to the Tracy Debugger Bar.
      *
-     * @param \Twig\Profiler\Profile $profiler
+     * @param Profile $profiler
      */
     public static function init($profiler): void
     {
@@ -59,7 +66,7 @@ class TwigBar implements IbarPanel
     {
         $this->processData($this->profiler);
 
-        return Helpers::capture(function ()
+        return Helpers::capture(function (): void
         {
             $duration = $this->formatDuration($this->profiler->getDuration());
             $memory = $this->formatBytes($this->profiler->getMemoryUsage());
@@ -75,7 +82,7 @@ class TwigBar implements IbarPanel
      */
     public function getTab(): string
     {
-        return Helpers::capture(function ()
+        return Helpers::capture(function (): void
         {
             $duration = $this->formatDuration($this->profiler->getDuration());
             $show = (bool) \count($this->profiler->getProfiles());
@@ -97,7 +104,7 @@ class TwigBar implements IbarPanel
         $base     = \log($size) / \log(1024);
         $suffixes = ['B', 'KB', 'MB', 'GB', 'TB'];
 
-        return $sign.\round(\pow(1024, $base - \floor($base)), $precision).$suffixes[\floor($base)];
+        return $sign.\round(1024 ** ($base - \floor($base)), $precision).$suffixes[\floor($base)];
     }
 
     private function formatDuration(float $seconds): string
