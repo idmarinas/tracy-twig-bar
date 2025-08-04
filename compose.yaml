@@ -1,0 +1,8 @@
+# Used for DEV
+services:
+    php:
+        image: idmarinas/php:7.4-xdebug
+        healthcheck:
+            test: php -v || exit 1
+        volumes:
+            - ./:/var/www/html
