@@ -1,0 +1,58 @@
+name: IDMarinas Tracy Twig Bar Test Suite
+
+on:
+    pull_request:
+        branches: [ master ]
+        types: [ opened, synchronize, reopened ]
+        tags-ignore: [ dependencies, documentation, meta, 'docker configuration', 'deployer configuration' ]
+    push:
+        branches: [ master ]
+        paths-ignore:
+            - '.deployer/**'
+            - '.docker/**'
+            - '.idea/**'
+            - 'migrations/**'
+            - '**/docs/**'
+            - '**/Writerside/**'
+            - '**/README.md'
+            - '**/COMMANDS.md'
+            - '**/TIPS.md'
+            - '**/TODO.md'
+            - '**/LICENSE'
+            - rector.php
+            - .editorconfig
+            - .gitignore
+            - compose.yaml
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        name: PHP ${{ matrix.php }}
+        strategy:
+            matrix:
+                php: [ '7.4', '8.0', '8.1', '8.2', '8.3', '8.4' ]
+
+        steps:
+            -   uses: actions/checkout@v4
+                with:
+                    fetch-depth: ${{ (matrix.php == '7.4') && '0' || '1' }}
+
+            -   name: Setup PHP ${{ matrix.php }}
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: ${{ matrix.php }}
+                    tools: flex
+
+            -   name: Download dependencies
+                uses: ramsey/composer-install@v3
+
+            #            -   name: Run test suite on PHP ${{ matrix.php }}
+            #                run: ./vendor/bin/phpunit --exclude ignore
+
+            # # Uncomment to activate SonarCloud Scan
+            # - name: SonarCloud Scan
+            #   if: matrix.php == '8.4' && matrix.symfony == '7.3.*'
+            #   uses: SonarSource/sonarqube-scan-action@v4
+            #   env:
+            #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+            #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
